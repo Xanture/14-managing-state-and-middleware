@@ -4,7 +4,11 @@ var app = app || {};
 (function(module) {
   const articleView = {};
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  //Done cOMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  /*
+  1 Renders the information to the article template.
+  2 On articleView.js 56
+  */
   const render = function(article) {
     let template = Handlebars.compile($('#article-template').text());
 
