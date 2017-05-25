@@ -4,7 +4,11 @@ var app = app || {};
 (function(module) {
   const newArticle = {};
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  //Done cOMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  /*
+  1 It's hidding and showing elements on the DOM
+  2 This is being called when we create or update a article. Create/Submit. When the new form changes and we hit the submit button it invokes the newArticle.create and newArticle.submit which are below in the same IFFE
+  */
   newArticle.initNewArticlePage = function() {
     $('.tab-content').show();
     $('#export-field').hide();
