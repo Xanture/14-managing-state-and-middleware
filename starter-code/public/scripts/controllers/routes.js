@@ -12,5 +12,6 @@ page('/author', '/');
 page('/author/:authorName', app.articleController.loadByAuthor, app.articleController.index);
 page('/category/:categoryName', app.articleController.loadByCategory, app.articleController.index);
 
-// COMMENT: What is this function doing?
+// Done cOMMENT: What is this function doing?
+// invokes everything on Page.js and making everything above a listener
 page();

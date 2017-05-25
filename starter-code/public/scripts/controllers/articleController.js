@@ -4,8 +4,13 @@ var app = app || {};
 (function(module) {
   const articleController = {};
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // Done cOMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
   // (put your response in a comment here)
+  /*
+  1 This function is assigning a function that has a praram that returns a function app.articleView.index with ctx.articles as a param that hides all aritcles then shows the article the user selected.
+  2 Page() in routes.js
+  3 Yes, app.articleView.index lives in articleView.js
+  */
   articleController.index = (ctx) => app.articleView.index(ctx.articles);
 
   // REVIEW: Middleware for grabbing one article by ID:
@@ -15,8 +20,13 @@ var app = app || {};
       next();
     };
 
-    // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+    // Done cOMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
     // (put your response in a comment here)
+    /*
+    1 The an invokation of this function. We are passing the field value and callback function. It's doing a http:// request which the server will send a database qurey for the aritcles in question that match field and value in question.
+    2 Get invoked in app.articleController.loadById which is invoked in routes.js on line 6 on Page()
+    3 It's calling the callback function articleData and passing the data into ctx.articles
+    */
     app.Article.findWhere('article_id', ctx.params.article_id, articleData);
   };
 
